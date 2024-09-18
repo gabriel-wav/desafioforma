@@ -1,0 +1,20 @@
+.container-celular {
+    width: 300px;
+    height: 600px;
+    background-color: #808080;
+    border-radius: 40px;
+    border: solid 5px;
+    border-color: #000000;
+    left: 50%;
+    position: relative;
+}
+
+.arte-album {
+    position: absolute;
+    top: 20%;
+    bottom: 50%;
+    left: auto;
+    align-items: center;
+    text-align: center;
+
+}
