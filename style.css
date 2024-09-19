@@ -1,35 +1,88 @@
-body {
-font-weight: bolder;
-font-family: ;
-font-size: larger;
+* {
+    /* Removi a propriedade background-color para evitar sobreposição de estilos */
+}
+
+.barranotificacoes {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 93% !important;
+    left: 5%;
+    height: 20px;
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 10px !important;
+    box-shadow: 0 2px 5px #0000001a !important;
+    z-index: 9999 !important;
+    border-radius: 35px 35px 0 0;
+    
+}
+
+@media only screen and (max-width: 400px) {
+
+    .textonotificacao {
+        font-size: smaller;
+        text-overflow: ellipsis;
+
+    }
+}
+
+body{
+    color: #febfb7;
+}
+
+.textonotificacao span {
+    margin-right: 5px;
+}
+
+p {
+    font-weight: 800;
+    font-family: "poppins", sans-serif;
+    font-size: larger;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Removi a propriedade background-color */
+}
+
+h5 {
+    font-size: small;
+    color: #686363;
+    /* Removi a propriedade background-color */
 }
 
 .container-celular {
     width: 300px;
     height: 600px;
-    background-color: #808080;
+    background-color: #461f24;
+    /* Adicionei a propriedade background-color com o valor #808080 */
     border-radius: 40px;
     border: solid 5px;
     border-color: #b61212;
+    top: 50%;
     left: 50%;
-    position: relative;
+    transform: translate(-50%, -50%);
+    position: absolute;
     display: grid;
     place-items: center;
+    grid-template-rows: auto 1fr;
 }
 
 .arte-album {
-    position: absolute;
-    top: 10%;
-    bottom: 50%;
+    position: relative;
+    margin-top: 75px;
     align-items: center;
-    text-align: center;
-
+    text-align: left;
 }
 
 .img-album {
     border-radius: 10px;
+    height: 200px;
+    /* Removi a propriedade background-color */
 }
 
 .img-album::before {
-    te
+    content: "Pré-visualização: ";
+    display: block;
+    font-size: 12px;
+    color: #ffffff;
 }
