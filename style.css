@@ -46,8 +46,29 @@ p {
 
 h5 {
     font-size: small;
-    color: #686363;
+    color: #b9b4b4;
     /* Removi a propriedade background-color */
+}
+
+.arte-album h5 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.arte-album h5::before {
+    content: "\2807"; /* código Unicode para 3 pontos verticais */
+    font-size: 16px; /* ajuste o tamanho do ícone */
+    vertical-align: middle;
+    position: absolute;
+    right: 0; /* ajuste a posição do ícone para que ele fique à direita */
+    top: 90%; /* ajuste a posição vertical do ícone */
+    transform: translateY(-50%); /* ajuste a posição vertical do ícone */
+    color: #fff;
+    background-color: rgb(254, 191, 183, 0.5)
+    border-radius: 100px;
+    align-items: center;
+    align-content: center;
+    width: 20px;
 }
 
 .container-celular {
