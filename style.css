@@ -1,6 +1,3 @@
-* {
-    /* Removi a propriedade background-color para evitar sobreposição de estilos */
-}
 
 .barranotificacoes {
     position: fixed !important;
@@ -44,7 +41,7 @@ p {
     /* Removi a propriedade background-color */
 }
 
-h5 {
+.artista h5 {
     font-size: small;
     color: #b9b4b4;
     /* Removi a propriedade background-color */
@@ -53,10 +50,11 @@ h5 {
 .arte-album h5 {
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
 }
 
 .arte-album h5::before {
-    content: "\2807"; /* código Unicode para 3 pontos verticais */
+    content:"\2807"; /* código Unicode para 3 pontos verticais */
     font-size: 16px; /* ajuste o tamanho do ícone */
     vertical-align: middle;
     position: absolute;
@@ -64,12 +62,22 @@ h5 {
     top: 90%; /* ajuste a posição vertical do ícone */
     transform: translateY(-50%); /* ajuste a posição vertical do ícone */
     color: #fff;
-    background-color: rgb(254, 191, 183, 0.5)
+    background-color: rgba(254, 191, 183, 0.299);
     border-radius: 100px;
     align-items: center;
     align-content: center;
     width: 20px;
+    justify-content: center;
+    display: flex;
+    margin:0 auto;
+    
 }
+
+.arte-album h5::before > span {
+    display: flex; /* adicionei display: flex */
+    justify-content: center; /* adicionei justify-content: center */
+}
+
 
 .container-celular {
     width: 300px;
@@ -107,3 +115,43 @@ h5 {
     font-size: 12px;
     color: #ffffff;
 }
+
+.music-player {
+    width: 100%; /* largura da barra de player de música */
+    height: 40px; /* altura da barra de player de música */
+    background-color: #333; /* cor de fundo da barra de player de música */
+    padding: 10px; /* espaçamento interno da barra de player de música */
+    display: flex; /* layout flexível para os elementos */
+    align-items: center; /* elementos centralizados verticalmente */
+  }
+  
+  .controls {
+    display: flex; /* layout flexível para os botões */
+    justify-content: space-between; /* botões espaçados igualmente */
+    width: 30%; /* largura dos botões */
+  }
+  
+  button {
+    width: 30px; /* largura dos botões */
+    height: 30px; /* altura dos botões */
+    margin: 10px; /* espaçamento entre os botões */
+    border: none; /* sem borda nos botões */
+    border-radius: 50%; /* borda arredondada nos botões */
+    background-color: #666; /* cor de fundo dos botões */
+    color: #fff; /* cor do texto dos botões */
+    cursor: pointer; /* ponteiro do mouse quando passa sobre os botões */
+  }
+  
+  .progress-bar {
+    width: 70%; /* largura da barra de progresso */
+    height: 10px; /* altura da barra de progresso */
+    background-color: #444; /* cor de fundo da barra de progresso */
+    border-radius: 10px; /* borda arredondada da barra de progresso */
+  }
+  
+  .progress {
+    width: 50%; /* largura da barra de progresso (inicialmente 50%) */
+    height: 100%; /* altura da barra de progresso */
+    background-color: #aaa; /* cor de fundo da barra de progresso */
+    border-radius: 10px; /* borda arredondada da barra de progresso */
+  }
